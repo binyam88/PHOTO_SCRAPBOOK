@@ -1,3 +1,64 @@
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
-integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album Scrapbook</title>
+    
+    <!-- Your custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Secure jQuery from official CDN with SRI (Subresource Integrity) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    
+    <!-- Turn.js from your forked GitHub repo -->
+    <!-- Replace 'yourusername' with your actual GitHub username -->
+    <script src="https://raw.githubusercontent.com/yourusername/turn.js/master/turn.min.js"></script>
+    
+    <!-- Your custom JavaScript – must come AFTER jQuery and Turn.js -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="book">
+        <!-- Front Cover -->
+        <div class="page cover front">
+            <h1>My Photo Album</h1>
+            <p>A collection of memories</p>
+        </div>
+        
+        <!-- Your photo pages – replace src with your actual image filenames -->
+        <div class="page">
+            <img src="images/photo1.jpg" alt="Photo 1">
+            <p>Caption for photo 1 (date, place, or memory)</p>
+        </div>
+        
+        <div class="page">
+            <img src="images/photo2.jpg" alt="Photo 2">
+            <p>Caption for photo 2</p>
+        </div>
+        
+        <div class="page">
+            <img src="images/photo3.jpg" alt="Photo 3">
+            <p>Caption for photo 3</p>
+        </div>
+        
+        <!-- Add as many pages as you have photos -->
+        <!-- Example of a page with two smaller photos side by side -->
+        <div class="page">
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <img src="images/photo4.jpg" alt="Photo 4" style="max-width: 45%; height: auto;">
+                <img src="images/photo5.jpg" alt="Photo 5" style="max-width: 45%; height: auto;">
+            </div>
+            <p>Two favorite moments together</p>
+        </div>
+        
+        <!-- Back Cover -->
+        <div class="page cover back">
+            <h2>The End</h2>
+            <p>More memories to come!</p>
+        </div>
+    </div>
+</body>
+</html>
